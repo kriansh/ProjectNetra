@@ -5,7 +5,7 @@ import time
 
 def download_esp32_image(loop=2):
     # URL of the ESP32 camera endpoint
-    url = "http://172.50.0.110/cam-hi.jpg"
+    url = "http://192.168.169.51//cam-hi.jpg"
     folder_name = "esp32_captures"
     
     try:

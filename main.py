@@ -1,5 +1,5 @@
 #run this file to access the backend
-
+import time
 from Backend.stt import nepali_speech_to_text
 from Backend.capture_face import capture_face
 from Backend.recognize_face import recognize_faces
@@ -56,11 +56,12 @@ async def main():
                         # Face recognition command    
                         elif check_command(command, ['पहिचान', 'चिन्नुहोस्']):
                            name = recognize_faces()
+                           time.sleep(5)
                            if name:
                                await text_to_speech(f"{name}को अनुहार पहिचान गरिएको छ")
                             
                         # Image analysis command
-                        elif check_command(command, ['तस्बिर विश्लेषण', 'वर्णन', 'विश्लेषण','के छ','के']):
+                        elif check_command(command, ['तस्बिर विश्लेषण', 'वर्णन', 'विश्लेषण','मेरो','अगाडि ','छ','के']):
                             try:
                                 image_paths = [
                                     "esp32_captures/esp32_image_0.jpg"
