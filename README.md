@@ -4,6 +4,8 @@ Welcome to **Netra**, an innovative project by Team Vision. Netra is a smart gla
 
 ## Features
 
+**(Use case are listed further below)**
+
 ### Facial Recognition
 
 Netra identifies and recognizes familiar faces, providing real-time audio feedback.
@@ -70,6 +72,40 @@ The main system combines all modules in the `Backend` folder.
 ### Dashboard Access
 
 The project includes a user-friendly dashboard for monitoring and managing the system, located in the `DashboardUI` folder.
+
+## Use Cases
+
+Netra is designed to assist visually impaired individuals in various real-life scenarios. Below are some examples of how it can be used:
+
+### 1. Recognizing People
+
+- Use Case: Identify familiar faces in social settings, family gatherings, or workplaces.
+- How to Use:
+  - Activate the camera module by saying "Aanuhar."
+  - Speak the name of the person (e.g., "Ram") while capturing their image.
+  - Later, when the person is nearby, Netra will announce their name, making social interactions easier.
+
+### 2. Navigating Safely
+
+- Use Case: Avoid obstacles while walking on streets or in crowded areas.
+- How to Use:
+  - Netra's camera continuously detects obstacles.
+  - When an obstacle is detected, an audio alert is provided, e.g., "Agadi khatra xa."
+
+### 3. Reading Text
+
+- Use Case: Access printed materials such as books, newspapers, or labels.
+- How to Use:
+  - Hold the text in front of Netra's camera and say anything like "ke cha", "aagadi ke cha padh ta",etc to activate.
+  - The text will be extracted and read aloud to the user.
+
+### 4. Understanding Surroundings
+
+- Use Case: Get a detailed understanding of the environment for better navigation or situational awareness.
+- How to Use:
+  - Netra provides audio descriptions of detected objects, enhancing spatial awareness by default.
+
+These use cases demonstrate how Netra empowers visually impaired individuals to lead more independent and informed lives.
 
 ---
 
