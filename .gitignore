@@ -1,3 +1,28 @@
+# Output files
+output.mp3
+*.mp3
+text_file.txt
+image.jpg
+
+#temp audio chunks
+temp_audio_chunks/
+
+# Virtual Environment
+venv/
+env/
+.env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.pt
+models/
+esp32_captures/
+face_data/
+
 # Node modules
 node_modules/
 
@@ -45,10 +70,6 @@ coverage/
 # Next.js specific
 .next/
 out/
-
-# Next.js generated folders
-/.next/
-/out/
 
 # Storybook build
 .storybook/

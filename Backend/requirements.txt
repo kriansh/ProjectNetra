@@ -1,0 +1,6 @@
+gtts
+librosa
+soundfile
+ollama
+googletrans
+dlib==19.24.2
