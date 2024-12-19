@@ -24,8 +24,7 @@ def analyze_image(image_path, prompt="What's in this image?"):
             base64_image = base64.b64encode(image_file.read()).decode('utf-8')
         
         # Create the prompt message
-        prompt_message = ("Please provide a brief, clear description of this image in 1 to 2 sentences."
-                         "Focus only on the main objects and actions visible, make it  sso that there is more  in paragraph and in short. You are helping a blind person to understand the image. WARNING:Dont list the objects, just describe the image."
+        prompt_message = ("Focus only on the main objects and actions visible, make it so that there is in short. You are helping a blind person to understand the image. WARNING:Dont list the objects, just annotate the image."
                          + prompt)
         
         # Make request to Groq API

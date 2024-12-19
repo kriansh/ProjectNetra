@@ -29,7 +29,8 @@ async def main():
                 break
                 
             # Check for activation commands
-            if check_command(text, ['सुरु', 'शुरू']):
+            if check_command(text, ['सुरु','सुरू', 'शुरू']):
+                await text_to_speech(f"सुरु भयो")
                 print("प्रणाली सक्रिय भयो! कमाण्डहरू सुन्दैछ...")
                 print("\nउपलब्ध कमाण्डहरू:")
                 print("- 'अनुहार लिनुहोस्' वा 'अनुहार सेभ गर्नुहोस्'")
@@ -43,15 +44,20 @@ async def main():
                         # Exit inner loop
                         if check_command(command, ['बन्द', 'रोक्नुहोस्', 'समाप्त']):
                             print("स्ट्यान्डबाय मोडमा फर्किंदै...")
+                            await text_to_speech(f"स्ट्यान्डबाय मोडमा फर्किंदै...")
                             break
                             
                         # Face capture command
                         if check_command(command, ['अनुहार', 'अनुहार सेभ']):
-                            capture_face()
+                            await text_to_speech(f"अनुहार सेभ गर्नुहोस्...")
+                            name = capture_face()
+                            await text_to_speech(f"{name}को अनुहार save गरिएको छ")
                             
                         # Face recognition command    
                         elif check_command(command, ['पहिचान', 'चिन्नुहोस्']):
-                            recognize_faces()
+                           name = recognize_faces()
+                           if name:
+                               await text_to_speech(f"{name}को अनुहार पहिचान गरिएको छ")
                             
                         # Image analysis command
                         elif check_command(command, ['तस्बिर विश्लेषण', 'वर्णन', 'विश्लेषण','के छ','के']):

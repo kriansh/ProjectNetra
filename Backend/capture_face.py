@@ -36,7 +36,7 @@ def capture_face():
         # Press 's' to capture
         try:
             a = english_speech_to_text().split()
-            if "sev" in a or "save" in a or "capture" in a:
+            if "sev" in a or "seb" in a or "sab" in a or "save" in a or "capture" in a:
                 # Save the image
                 cv2.imwrite(f'face_data/{name}.jpg', frame)
                 print(f"Image saved as 'face_data/{name}.jpg'")

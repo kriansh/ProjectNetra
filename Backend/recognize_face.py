@@ -1,7 +1,6 @@
 import cv2
 import os
 import numpy as np
-from cv2 import face
 import asyncio
 from .refinedtts import text_to_speech
 import time
@@ -9,7 +8,7 @@ import time
 def train_face_recognizer():
     try:
         face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
-        recognizer = cv2.face_LBPHFaceRecognizer.create()
+        recognizer = cv2.face.LBPHFaceRecognizer_create()
         
         faces = []
         labels = []
@@ -70,7 +69,7 @@ def recognize_faces():
     
     print("Starting face recognition on ESP32 feed...")
     last_detection_time = 0
-    detection_cooldown = 2  # Seconds between detection attempts
+    detection_cooldown = 0.5  # Seconds between detection attempts
     
     while True:
         try:
@@ -130,6 +129,7 @@ def recognize_faces():
                     print(f"Detected: {name} with confidence {confidence}%")
                     cv2.imshow('Face Recognition', frame)
                     cv2.waitKey(1)
+                    cv2.destroyAllWindows()
                     return name
                     
                 except Exception as e:
