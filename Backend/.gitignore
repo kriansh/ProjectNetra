@@ -1,0 +1,24 @@
+# Output files
+output.mp3
+temp_output.mp3
+text_file.txt
+image.jpg
+
+#temp audio chunks
+temp_audio_chunks/
+
+# Virtual Environment
+venv/
+env/
+.env/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+*.pt
+models/
+ESP32 related code/esp32_captures/
+esp32_captures/
