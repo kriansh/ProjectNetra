@@ -41,7 +41,7 @@ To set up and run Netra in a new environment:
 1. Clone the repository:
 
    ```bash
-   git pull https://github.com/kriansh/Netra.git
+   git pull https://github.com/kriansh/ProjectNetra.git
    ```
 
 2. Install the necessary dependencies:
